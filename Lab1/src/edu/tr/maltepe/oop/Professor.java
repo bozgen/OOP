@@ -1,20 +1,17 @@
 package edu.tr.maltepe.oop;
 
-public class Professor {
-    private String firstName;
-    private String lastName;
+public class Professor extends Person{
     private String lecture;
 
-    Professor( String firstName_, String lastName_, String lecture_ ){
-        firstName = firstName_;
-        lastName = lastName_;
+    Professor(String firstname_, String lastname_, int age_, String lecture_) {
+        super(firstname_, lastname_, age_);
         lecture = lecture_;
     }
 
-    public String getName(){
-        return this.firstName + " " + this.lastName;
-    }
-    public String getLecture(){
+    String getLecture(){
         return this.lecture;
+    }
+    void setLecture(String newLecture){
+        this.lecture = newLecture;
     }
 }

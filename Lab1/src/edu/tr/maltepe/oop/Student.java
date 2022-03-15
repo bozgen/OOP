@@ -1,18 +1,17 @@
 package edu.tr.maltepe.oop;
 
-public class Student {
-    private String name;
+public class Student extends Person {
     private int id;
 
-    Student( String name_, int id_){
-        name = name_;
+    Student(String firstname_, String lastname_, int age_, int id_) {
+        super(firstname_, lastname_, age_);
         id = id_;
     }
 
-    public String getName() {
-        return this.name;
-    }
-    public int getId(){
+    int getId(){
         return this.id;
+    }
+    void setId(int newId){
+        this.id = newId;
     }
 }
