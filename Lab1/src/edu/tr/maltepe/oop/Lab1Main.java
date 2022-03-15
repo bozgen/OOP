@@ -19,5 +19,9 @@ public class Lab1Main {
         professor1.setLecture("Object Oriented Programming");
         System.out.println("Professor " + professor1.getName()+ " who teaches "+ professor1.getLecture()+ " is "+ professor1.getAge() + " years old.");
 
+
+        professor2.tellLecture();
+
+        student2.greet();
     }
 }

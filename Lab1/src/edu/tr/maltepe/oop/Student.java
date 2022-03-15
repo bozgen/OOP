@@ -14,4 +14,7 @@ public class Student extends Person {
     void setId(int newId){
         this.id = newId;
     }
+    void greet(){
+        System.out.println("Hello my name is " + this.getName());
+    }
 }

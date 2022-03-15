@@ -14,4 +14,7 @@ public class Professor extends Person{
     void setLecture(String newLecture){
         this.lecture = newLecture;
     }
+    void tellLecture(){
+        System.out.println("Hello, I teach " + this.lecture);
+    }
 }
