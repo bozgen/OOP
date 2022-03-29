@@ -3,6 +3,7 @@ package edu.tr.maltepe.oop;
 public class Main {
     public static void main(String[] args){
         Student s1 = new Student("Bilal","Ozgen",22,6548);
+        Student s2 = new Student("Arda","Hacifevzioglu",22,6549);
         Professor p1 = new Professor("Ensar", "Gul", 60, "oop");
         Library lib = new Library("Maltepe University Library");
 
@@ -27,6 +28,9 @@ public class Main {
         s1.printBorrowedBooks();
         lib.printAvailableBooks();
 
+        s2.borrowBook(lib.books.get(0),lib);
+        s2.printBorrowedBooks();
+        lib.printAvailableBooks();
         /* By Title
         lib.printAvailableBooks();
         Book selectedBook = lib.getBookByTitle("The Hobbit");
@@ -37,7 +41,6 @@ public class Main {
         System.out.println(s1.getBorrowedBooks().get(0).getTitle());
         */
 
-        lib.printAvailableBooks();
         p1.borrowBook(lib.books.get(2),lib);
 
         p1.printBorrowedBooks();
