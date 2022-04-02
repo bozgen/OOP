@@ -2,7 +2,7 @@ package edu.tr.maltepe.oop;
 
 import java.util.ArrayList;
 
-public class Person {
+public class Person implements IDoSport {
     private String firstname;
     private String lastname;
     private int age;
@@ -31,13 +31,10 @@ public class Person {
     void borrowBook(Book book, Library lib){
         borrowedBooks.add(book);
         lib.books.remove(book);
-        System.out.println(firstname+" "+lastname+" borrowed the book "+book.getTitle()+" by "+book.getAuthor()+".");
     }
     void returnBook(Book book, Library lib){
         borrowedBooks.remove(book);
         lib.books.add(book);
-
-        System.out.println(firstname+" "+lastname+" returned the book "+book.getTitle()+" by "+book.getAuthor()+" to the " + lib.getName()+".");
     }
     ArrayList<Book> getBorrowedBooks(){
         return borrowedBooks;
@@ -55,4 +52,14 @@ public class Person {
         System.out.println();
     }
 
+    @Override
+    public void swim(SportsCenter center) {
+        System.out.println(this.getName() + " went to "
+                +  center.getName() + " and started swimming in "+ center.getSwimmingPool());
+    }
+    @Override
+    public void playFootball(SportsCenter center) {
+        System.out.println(this.getName() + " went to " +  center.getName()
+                + " and started playing football at "+ center.getFootballField());
+    }
 }

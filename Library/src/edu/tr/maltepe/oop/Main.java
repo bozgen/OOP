@@ -45,5 +45,17 @@ public class Main {
 
         p1.printBorrowedBooks();
         lib.printAvailableBooks();
+
+        /* SPORTS CENTER ASSIGNMENT */
+
+        SportsCenter center1 = new SportsCenter("Maltepe University Sports Center",
+                "Football Playing Field","Swimming Pool");
+        SportsCenter center2 = new SportsCenter("Other Sports Center",
+                "Other Football Field", "Other Swimming Pool");
+
+        p1.swim(center1);
+        s1.playFootball(center1);
+        s2.playFootball(center2);
+        s2.swim(center2);
     }
 }

@@ -1,8 +1,6 @@
 package edu.tr.maltepe.oop;
 
-import java.util.ArrayList;
-
-public class Professor extends Person{
+public class Professor extends Person {
     private String lecture;
 
     Professor(String firstname_, String lastname_, int age_, String lecture_) {
@@ -22,14 +20,12 @@ public class Professor extends Person{
 
     @Override
     public void borrowBook(Book book, Library lib){
-        borrowedBooks.add(book);
-        lib.books.remove(book);
+        super.borrowBook(book,lib);
         System.out.println(this.getName()+"(professor) borrowed the book "+book.getTitle()+" by "+book.getAuthor()+".");
     }
     @Override
     public void returnBook(Book book, Library lib){
-        borrowedBooks.remove(book);
-        lib.books.add(book);
+        super.returnBook(book,lib);
         System.out.println(this.getName()+"(professor) returned the book "+book.getTitle()+" by "+book.getAuthor()+" to the " + lib.getName()+".");
     }
 }

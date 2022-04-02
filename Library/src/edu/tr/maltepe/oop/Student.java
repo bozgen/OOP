@@ -23,14 +23,12 @@ public class Student extends Person {
 
     @Override
     public void borrowBook(Book book, Library lib){
-        borrowedBooks.add(book);
-        lib.books.remove(book);
+        super.borrowBook(book,lib);
         System.out.println(this.getName()+"(student) borrowed the book "+book.getTitle()+" by "+book.getAuthor()+".");
     }
     @Override
     public void returnBook(Book book, Library lib){
-        borrowedBooks.remove(book);
-        lib.books.add(book);
+        super.returnBook(book,lib);
         System.out.println(this.getName()+"(student) returned the book "+book.getTitle()+" by "+book.getAuthor()+" to the " + lib.getName()+".");
     }
 }
